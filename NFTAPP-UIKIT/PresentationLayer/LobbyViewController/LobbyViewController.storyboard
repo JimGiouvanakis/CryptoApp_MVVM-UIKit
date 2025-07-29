@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lobby View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LobbyViewController" id="Y6W-OH-hqX" customClass="LobbyViewController" customModule="NFTAPP_UIKIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S7Z-s0-EIa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-NY-jsQ" customClass="HeaderView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="64.666666666666686"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-Tr-F5h">
+                                <rect key="frame" x="0.0" y="123.66666666666669" width="393" height="647.33333333333326"/>
+                                <connections>
+                                    <segue destination="zgA-3Y-koS" kind="embed" id="rsx-bH-ZF5"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5M-64-9gi" customClass="TabView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="771" width="393" height="81"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SWX-rj-tZk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fhz-Tr-F5h" firstAttribute="leading" secondItem="SWX-rj-tZk" secondAttribute="leading" id="66e-Wp-J1V"/>
+                            <constraint firstItem="Fhz-Tr-F5h" firstAttribute="height" secondItem="wcU-NY-jsQ" secondAttribute="height" multiplier="10" id="7gi-SB-3Iy"/>
+                            <constraint firstItem="D5M-64-9gi" firstAttribute="top" secondItem="Fhz-Tr-F5h" secondAttribute="bottom" id="Bh9-MS-UyC"/>
+                            <constraint firstItem="wcU-NY-jsQ" firstAttribute="trailing" secondItem="SWX-rj-tZk" secondAttribute="trailing" id="Lpa-qr-XNB"/>
+                            <constraint firstAttribute="bottom" secondItem="D5M-64-9gi" secondAttribute="bottom" id="Ro5-ob-wdn"/>
+                            <constraint firstItem="wcU-NY-jsQ" firstAttribute="leading" secondItem="SWX-rj-tZk" secondAttribute="leading" id="cAP-Wx-Xv0"/>
+                            <constraint firstItem="Fhz-Tr-F5h" firstAttribute="height" secondItem="D5M-64-9gi" secondAttribute="height" multiplier="8" id="d4m-eE-f8q"/>
+                            <constraint firstItem="Fhz-Tr-F5h" firstAttribute="top" secondItem="wcU-NY-jsQ" secondAttribute="bottom" id="l3e-IE-DBf"/>
+                            <constraint firstItem="SWX-rj-tZk" firstAttribute="trailing" secondItem="Fhz-Tr-F5h" secondAttribute="trailing" id="oKy-gZ-NbA"/>
+                            <constraint firstItem="D5M-64-9gi" firstAttribute="leading" secondItem="SWX-rj-tZk" secondAttribute="leading" id="opA-TZ-Uof"/>
+                            <constraint firstItem="D5M-64-9gi" firstAttribute="trailing" secondItem="SWX-rj-tZk" secondAttribute="trailing" id="vIx-oX-0SF"/>
+                            <constraint firstItem="wcU-NY-jsQ" firstAttribute="top" secondItem="SWX-rj-tZk" secondAttribute="top" id="x5u-ib-Hcp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z9U-eQ-fCB"/>
+                    <connections>
+                        <outlet property="containerView" destination="Fhz-Tr-F5h" id="eJp-M6-RpM"/>
+                        <outlet property="customView" destination="S7Z-s0-EIa" id="N9X-OJ-iys"/>
+                        <outlet property="headerView" destination="wcU-NY-jsQ" id="XTY-Ke-7vF"/>
+                        <outlet property="tabView" destination="D5M-64-9gi" id="nIt-ds-vy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3835.8778625954196" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J4Z-4e-ngp">
+            <objects>
+                <navigationController storyboardIdentifier="LobbyNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WN8-k3-7gG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aC3-zg-bqq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="ZVr-x9-tkJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cc-WV-FYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2909.1603053435115" y="-34.507042253521128"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5kt-lV-eyh">
+            <objects>
+                <viewController id="zgA-3Y-koS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6m-M0-jNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4807" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

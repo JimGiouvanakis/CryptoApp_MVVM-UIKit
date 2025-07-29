@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreDetailsTableViewCellIdentifier" rowHeight="470" id="i5l-E6-AHv" customClass="MoreDetailsTableViewCell" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="470"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i5l-E6-AHv" id="acj-Ai-ysy">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="470"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="526-kw-6q7">
+                        <rect key="frame" x="4" y="4" width="380" height="462"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acr-cW-Oj3">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-sl-KwR">
+                                <rect key="frame" x="0.0" y="31" width="380" height="431"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45i-3A-fuq" customClass="ImageCustomView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="172.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkc-UA-Cob" customClass="MoreInfoView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180.33333333333337" width="380" height="250.66666666666663"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="45i-3A-fuq" firstAttribute="height" secondItem="PVo-sl-KwR" secondAttribute="height" multiplier="0.4" id="1eD-hL-9cL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Acr-cW-Oj3" firstAttribute="height" secondItem="526-kw-6q7" secondAttribute="height" multiplier="0.05" id="Qaw-ya-lQx"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="526-kw-6q7" secondAttribute="bottom" constant="4" id="5qV-1J-MLC"/>
+                    <constraint firstItem="526-kw-6q7" firstAttribute="leading" secondItem="acj-Ai-ysy" secondAttribute="leading" constant="4" id="LE7-uq-07l"/>
+                    <constraint firstItem="526-kw-6q7" firstAttribute="top" secondItem="acj-Ai-ysy" secondAttribute="top" constant="4" id="g5o-qw-wKe"/>
+                    <constraint firstAttribute="trailing" secondItem="526-kw-6q7" secondAttribute="trailing" constant="4" id="m7g-oc-25a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageCustomView" destination="45i-3A-fuq" id="GUV-0P-zas"/>
+                <outlet property="moreInfoView" destination="hkc-UA-Cob" id="pFX-af-byW"/>
+                <outlet property="nftNameTitle" destination="Acr-cW-Oj3" id="P3f-8H-VRo"/>
+                <outlet property="stackView" destination="526-kw-6q7" id="chE-Rq-clQ"/>
+            </connections>
+            <point key="canvasLocation" x="184.73282442748092" y="26.760563380281692"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

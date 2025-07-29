@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+            <connections>
+                <outlet property="favoriteViewButton" destination="fSv-PF-oNY" id="oiN-uS-rWt"/>
+                <outlet property="homeButton" destination="XRb-n3-jNq" id="bjp-U9-B5b"/>
+                <outlet property="searchViewButton" destination="kWf-Rx-wzg" id="jDK-8y-Med"/>
+                <outlet property="settingViewButton" destination="WOW-IM-d7q" id="Qpa-xf-cUI"/>
+                <outlet property="stackView" destination="Drg-0z-j8Z" id="N2g-Lo-5CJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pTD-kp-rxC">
+            <rect key="frame" x="0.0" y="0.0" width="901" height="169"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drg-0z-j8Z">
+                    <rect key="frame" x="0.0" y="59" width="901" height="76"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-n3-jNq" userLabel="Home Button">
+                            <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="76"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="didTapHomeButton:" destination="-1" eventType="touchUpInside" id="4ty-q4-asT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWf-Rx-wzg" userLabel="Search View Button">
+                            <rect key="frame" x="225.33333333333331" y="0.0" width="225.33333333333331" height="76"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="didTapSearchButton:" destination="-1" eventType="touchUpInside" id="Bq0-KG-j4g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-PF-oNY" userLabel="Favorite View Button">
+                            <rect key="frame" x="450.66666666666674" y="0.0" width="225" height="76"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="didTapFavoriteButton:" destination="-1" eventType="touchUpInside" id="6vs-2g-JRx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOW-IM-d7q" userLabel="Setting View Button">
+                            <rect key="frame" x="675.66666666666663" y="0.0" width="225.33333333333337" height="76"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="didTapSettingButton:" destination="-1" eventType="touchUpInside" id="WvC-7v-2zo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="d2b-S8-buf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d2b-S8-buf" firstAttribute="bottom" secondItem="Drg-0z-j8Z" secondAttribute="bottom" id="26x-L3-4xe"/>
+                <constraint firstItem="Drg-0z-j8Z" firstAttribute="leading" secondItem="d2b-S8-buf" secondAttribute="leading" id="7Ze-Jk-pBQ"/>
+                <constraint firstItem="d2b-S8-buf" firstAttribute="trailing" secondItem="Drg-0z-j8Z" secondAttribute="trailing" id="e0m-7e-trB"/>
+                <constraint firstItem="Drg-0z-j8Z" firstAttribute="top" secondItem="d2b-S8-buf" secondAttribute="top" id="uBU-CJ-nBX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="779.38931297709917" y="-544.71830985915494"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmPopUpView" customModule="NFTAPP_UIKIT" customModuleProvider="target">
+            <connections>
+                <outlet property="customView" destination="l4L-uq-cbf" id="Zyk-mf-6Cd"/>
+                <outlet property="okButton" destination="MJC-BT-V7H" id="yyx-GG-qGE"/>
+                <outlet property="titleLabel" destination="i9i-Rs-wza" id="RKE-vd-n2F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="l4L-uq-cbf">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="262"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9i-Rs-wza">
+                    <rect key="frame" x="25" y="84" width="359" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJC-BT-V7H">
+                    <rect key="frame" x="25" y="134.33333333333334" width="359" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="okButtonTapped:" destination="-1" eventType="touchUpInside" id="yyo-Mf-M5D"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="OXN-gB-wVC"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="i9i-Rs-wza" firstAttribute="leading" secondItem="OXN-gB-wVC" secondAttribute="leading" constant="25" id="Oy1-ZO-5wm"/>
+                <constraint firstItem="OXN-gB-wVC" firstAttribute="trailing" secondItem="i9i-Rs-wza" secondAttribute="trailing" constant="25" id="UuN-Mk-vH2"/>
+                <constraint firstItem="i9i-Rs-wza" firstAttribute="top" secondItem="OXN-gB-wVC" secondAttribute="top" constant="25" id="eN3-ZC-1ix"/>
+                <constraint firstItem="MJC-BT-V7H" firstAttribute="top" secondItem="i9i-Rs-wza" secondAttribute="bottom" constant="30" id="jW4-Ze-Jv8"/>
+                <constraint firstItem="MJC-BT-V7H" firstAttribute="leading" secondItem="OXN-gB-wVC" secondAttribute="leading" constant="25" id="pnK-OG-Om4"/>
+                <constraint firstItem="OXN-gB-wVC" firstAttribute="trailing" secondItem="MJC-BT-V7H" secondAttribute="trailing" constant="25" id="tJd-X1-0aZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="229.7709923664122" y="-165.49295774647888"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
