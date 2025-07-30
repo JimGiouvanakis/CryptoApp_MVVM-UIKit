@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     var nfts: [NFT] = []
     
-    var searchListNft s: [NFT] = [] {
+    var searchListNfts: [NFT] = [] {
         didSet {
             self.searchTableView.reloadData()
         }
